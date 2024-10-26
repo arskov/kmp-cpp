@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		303144402CCD889400F18FE1 /* libKmpSample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3031443C2CCD889400F18FE1 /* libKmpSample.dylib */; };
+		3031444A2CCD981800F18FE1 /* libKmpSample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 303144462CCD981800F18FE1 /* libKmpSample.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3031443C2CCD889400F18FE1 /* libKmpSample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libKmpSample.dylib; sourceTree = "<group>"; };
-		3031443D2CCD889400F18FE1 /* libKmpSample_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libKmpSample_api.h; sourceTree = "<group>"; };
-		3031443E2CCD889400F18FE1 /* libKmpSample.dylib.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = libKmpSample.dylib.dSYM; sourceTree = "<group>"; };
+		303144462CCD981800F18FE1 /* libKmpSample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libKmpSample.dylib; sourceTree = "<group>"; };
+		303144472CCD981800F18FE1 /* libKmpSample_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libKmpSample_api.h; sourceTree = "<group>"; };
+		303144482CCD981800F18FE1 /* libKmpSample.dylib.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = libKmpSample.dylib.dSYM; sourceTree = "<group>"; };
 		303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KmpIntegrationCpp; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,19 +42,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303144402CCD889400F18FE1 /* libKmpSample.dylib in Frameworks */,
+				3031444A2CCD981800F18FE1 /* libKmpSample.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3031443F2CCD889400F18FE1 /* KmpSampleDebugShared */ = {
+		303144492CCD981800F18FE1 /* KmpSampleDebugShared */ = {
 			isa = PBXGroup;
 			children = (
-				3031443C2CCD889400F18FE1 /* libKmpSample.dylib */,
-				3031443D2CCD889400F18FE1 /* libKmpSample_api.h */,
-				3031443E2CCD889400F18FE1 /* libKmpSample.dylib.dSYM */,
+				303144462CCD981800F18FE1 /* libKmpSample.dylib */,
+				303144472CCD981800F18FE1 /* libKmpSample_api.h */,
+				303144482CCD981800F18FE1 /* libKmpSample.dylib.dSYM */,
 			);
 			path = KmpSampleDebugShared;
 			sourceTree = "<group>";
@@ -79,7 +79,7 @@
 		303C6A772CCD81C100003CE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3031443F2CCD889400F18FE1 /* KmpSampleDebugShared */,
+				303144492CCD981800F18FE1 /* KmpSampleDebugShared */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,6 +276,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KmpSampleDebugShared",
 					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
+					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -288,6 +289,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KmpSampleDebugShared",
+					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
 					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

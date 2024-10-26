@@ -13,7 +13,7 @@
 int main(int argc, const char *argv[]) {
 
     libKmpSample_ExportedSymbols *lib = libKmpSample_symbols();
-    for (int i = 0; i < 100000000; i++) {
+    for (int i = 0; i < 10000000; i++) {
         libKmpSample_kref_design_KmpClazz clazzInstance =
             lib->kotlin.root.design.KmpClazz.KmpClazz();
 
@@ -22,7 +22,8 @@ int main(int argc, const char *argv[]) {
             lib->kotlin.root.design.KmpClazz.interfaceMethod(clazzInstance);
         //        std::cout << "interfaceMethod result: " <<
         //        interfaceMethodResult << std::endl;
-
+        lib->DisposeString(interfaceMethodResult);
+        
         // Call returnInt and convert the result
         libKmpSample_kref_kotlin_Int intResult =
             lib->kotlin.root.design.KmpClazz.returnInt(clazzInstance);
@@ -37,7 +38,7 @@ int main(int argc, const char *argv[]) {
 
         // Explicitly delete the instance
         lib->DisposeStablePointer(clazzInstance.pinned);
-        if (i % 1000 == 0) {
+        if (i % 100000 == 0) {
             std::cout << "Created " << i << " objects" << std::endl;
         }
     }

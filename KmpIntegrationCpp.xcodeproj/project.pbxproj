@@ -20,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KmpIntegrationCpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		303C6A782CCD81C100003CE8 /* KmpSample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KmpSample.framework; sourceTree = "<group>"; };
+		303C6A792CCD81C100003CE8 /* KmpSample.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = KmpSample.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				303C6A6F2CCD818A00003CE8 /* KmpIntegrationCpp */,
+				303C6A772CCD81C100003CE8 /* Frameworks */,
 				303C6A6E2CCD818A00003CE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +58,24 @@
 				303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		303C6A772CCD81C100003CE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				303C6A7A2CCD81C100003CE8 /* KmpSampleDebugFramework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		303C6A7A2CCD81C100003CE8 /* KmpSampleDebugFramework */ = {
+			isa = PBXGroup;
+			children = (
+				303C6A782CCD81C100003CE8 /* KmpSample.framework */,
+				303C6A792CCD81C100003CE8 /* KmpSample.framework.dSYM */,
+			);
+			name = KmpSampleDebugFramework;
+			path = "../../projects/kotlin-projects/design-patterns/lib/build/bin/macosX64/KmpSampleDebugFramework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

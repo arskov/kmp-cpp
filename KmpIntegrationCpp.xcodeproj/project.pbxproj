@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		303144402CCD889400F18FE1 /* libKmpSample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3031443C2CCD889400F18FE1 /* libKmpSample.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		303C6A6B2CCD818A00003CE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,9 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3031443C2CCD889400F18FE1 /* libKmpSample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libKmpSample.dylib; sourceTree = "<group>"; };
+		3031443D2CCD889400F18FE1 /* libKmpSample_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libKmpSample_api.h; sourceTree = "<group>"; };
+		3031443E2CCD889400F18FE1 /* libKmpSample.dylib.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = libKmpSample.dylib.dSYM; sourceTree = "<group>"; };
 		303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KmpIntegrationCpp; sourceTree = BUILT_PRODUCTS_DIR; };
-		303C6A782CCD81C100003CE8 /* KmpSample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KmpSample.framework; sourceTree = "<group>"; };
-		303C6A792CCD81C100003CE8 /* KmpSample.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = KmpSample.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,12 +42,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303144402CCD889400F18FE1 /* libKmpSample.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3031443F2CCD889400F18FE1 /* KmpSampleDebugShared */ = {
+			isa = PBXGroup;
+			children = (
+				3031443C2CCD889400F18FE1 /* libKmpSample.dylib */,
+				3031443D2CCD889400F18FE1 /* libKmpSample_api.h */,
+				3031443E2CCD889400F18FE1 /* libKmpSample.dylib.dSYM */,
+			);
+			path = KmpSampleDebugShared;
+			sourceTree = "<group>";
+		};
 		303C6A642CCD818900003CE8 = {
 			isa = PBXGroup;
 			children = (
@@ -63,19 +79,9 @@
 		303C6A772CCD81C100003CE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				303C6A7A2CCD81C100003CE8 /* KmpSampleDebugFramework */,
+				3031443F2CCD889400F18FE1 /* KmpSampleDebugShared */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		303C6A7A2CCD81C100003CE8 /* KmpSampleDebugFramework */ = {
-			isa = PBXGroup;
-			children = (
-				303C6A782CCD81C100003CE8 /* KmpSample.framework */,
-				303C6A792CCD81C100003CE8 /* KmpSample.framework.dSYM */,
-			);
-			name = KmpSampleDebugFramework;
-			path = "../../projects/kotlin-projects/design-patterns/lib/build/bin/macosX64/KmpSampleDebugFramework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +272,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KmpSampleDebugShared",
+					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -274,6 +285,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KmpSampleDebugShared",
+					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

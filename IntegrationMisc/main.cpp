@@ -43,6 +43,9 @@ int main(int argc, const char *argv[]) {
         lib->kotlin.root.design.acceptString("String from C++");
     std::cout << result << std::endl;
     lib->DisposeString(result);
+    
+    unsigned char nativeByteArray[6] = {0xCA, 0xFE, 0xCA, 0xFE, 0xCA, 0xFE};
+    lib->kotlin.root.design.readNativeByteArray(static_cast<void*>(nativeByteArray), sizeof(nativeByteArray));
 
     return 0;
 }

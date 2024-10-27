@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  KmpIntegrationCpp
-//
-//  Created by Arseni Kavalchuk on 26.10.24.
-//
-
 #include "libKmpSample_api.h"
 #include <chrono>
 #include <iostream>

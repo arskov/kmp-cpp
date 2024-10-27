@@ -8,9 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3031444A2CCD981800F18FE1 /* libKmpSample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 303144462CCD981800F18FE1 /* libKmpSample.dylib */; };
+		3031444E2CCE566200F18FE1 /* libKmpSample.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 303144462CCD981800F18FE1 /* libKmpSample.dylib */; };
+		303144592CCE58A700F18FE1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 303144582CCE573400F18FE1 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3031444F2CCE566200F18FE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		303C6A6B2CCD818A00003CE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -26,18 +37,41 @@
 		303144462CCD981800F18FE1 /* libKmpSample.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libKmpSample.dylib; sourceTree = "<group>"; };
 		303144472CCD981800F18FE1 /* libKmpSample_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libKmpSample_api.h; sourceTree = "<group>"; };
 		303144482CCD981800F18FE1 /* libKmpSample.dylib.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = libKmpSample.dylib.dSYM; sourceTree = "<group>"; };
-		303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KmpIntegrationCpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		303144532CCE566200F18FE1 /* IntegrationMisc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntegrationMisc; sourceTree = BUILT_PRODUCTS_DIR; };
+		303144582CCE573400F18FE1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		303C6A6D2CCD818A00003CE8 /* IntegrationGcTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntegrationGcTest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		303144542CCE566200F18FE1 /* Exceptions for "IntegrationGcTest" folder in "IntegrationMisc" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				main.cpp,
+			);
+			target = 3031444B2CCE566200F18FE1 /* IntegrationMisc */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		303C6A6F2CCD818A00003CE8 /* KmpIntegrationCpp */ = {
+		303C6A6F2CCD818A00003CE8 /* IntegrationGcTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KmpIntegrationCpp;
+			exceptions = (
+				303144542CCE566200F18FE1 /* Exceptions for "IntegrationGcTest" folder in "IntegrationMisc" target */,
+			);
+			path = IntegrationGcTest;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3031444D2CCE566200F18FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3031444E2CCE566200F18FE1 /* libKmpSample.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		303C6A6A2CCD818A00003CE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +93,19 @@
 			path = KmpSampleDebugShared;
 			sourceTree = "<group>";
 		};
+		303144572CCE572200F18FE1 /* IntegrationMisc */ = {
+			isa = PBXGroup;
+			children = (
+				303144582CCE573400F18FE1 /* main.cpp */,
+			);
+			path = IntegrationMisc;
+			sourceTree = "<group>";
+		};
 		303C6A642CCD818900003CE8 = {
 			isa = PBXGroup;
 			children = (
-				303C6A6F2CCD818A00003CE8 /* KmpIntegrationCpp */,
+				303144572CCE572200F18FE1 /* IntegrationMisc */,
+				303C6A6F2CCD818A00003CE8 /* IntegrationGcTest */,
 				303C6A772CCD81C100003CE8 /* Frameworks */,
 				303C6A6E2CCD818A00003CE8 /* Products */,
 			);
@@ -71,7 +114,8 @@
 		303C6A6E2CCD818A00003CE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */,
+				303C6A6D2CCD818A00003CE8 /* IntegrationGcTest */,
+				303144532CCE566200F18FE1 /* IntegrationMisc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,9 +131,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		303C6A6C2CCD818A00003CE8 /* KmpIntegrationCpp */ = {
+		3031444B2CCE566200F18FE1 /* IntegrationMisc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 303C6A742CCD818A00003CE8 /* Build configuration list for PBXNativeTarget "KmpIntegrationCpp" */;
+			buildConfigurationList = 303144502CCE566200F18FE1 /* Build configuration list for PBXNativeTarget "IntegrationMisc" */;
+			buildPhases = (
+				3031444C2CCE566200F18FE1 /* Sources */,
+				3031444D2CCE566200F18FE1 /* Frameworks */,
+				3031444F2CCE566200F18FE1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				303C6A6F2CCD818A00003CE8 /* IntegrationGcTest */,
+			);
+			name = IntegrationMisc;
+			packageProductDependencies = (
+			);
+			productName = KmpIntegrationCpp;
+			productReference = 303144532CCE566200F18FE1 /* IntegrationMisc */;
+			productType = "com.apple.product-type.tool";
+		};
+		303C6A6C2CCD818A00003CE8 /* IntegrationGcTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303C6A742CCD818A00003CE8 /* Build configuration list for PBXNativeTarget "IntegrationGcTest" */;
 			buildPhases = (
 				303C6A692CCD818A00003CE8 /* Sources */,
 				303C6A6A2CCD818A00003CE8 /* Frameworks */,
@@ -100,13 +166,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				303C6A6F2CCD818A00003CE8 /* KmpIntegrationCpp */,
+				303C6A6F2CCD818A00003CE8 /* IntegrationGcTest */,
 			);
-			name = KmpIntegrationCpp;
+			name = IntegrationGcTest;
 			packageProductDependencies = (
 			);
 			productName = KmpIntegrationCpp;
-			productReference = 303C6A6D2CCD818A00003CE8 /* KmpIntegrationCpp */;
+			productReference = 303C6A6D2CCD818A00003CE8 /* IntegrationGcTest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -137,12 +203,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				303C6A6C2CCD818A00003CE8 /* KmpIntegrationCpp */,
+				303C6A6C2CCD818A00003CE8 /* IntegrationGcTest */,
+				3031444B2CCE566200F18FE1 /* IntegrationMisc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3031444C2CCE566200F18FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303144592CCE58A700F18FE1 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		303C6A692CCD818A00003CE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +228,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		303144512CCE566200F18FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KmpSampleDebugShared",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		303144522CCE566200F18FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KmpSampleDebugShared",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		303C6A722CCD818A00003CE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,8 +374,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KmpSampleDebugShared",
-					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
-					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -289,8 +386,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KmpSampleDebugShared",
-					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
-					"$(PROJECT_DIR)/KmpSampleDebugShared\\ 2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -299,6 +394,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		303144502CCE566200F18FE1 /* Build configuration list for PBXNativeTarget "IntegrationMisc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303144512CCE566200F18FE1 /* Debug */,
+				303144522CCE566200F18FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		303C6A682CCD818900003CE8 /* Build configuration list for PBXProject "KmpIntegrationCpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -308,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		303C6A742CCD818A00003CE8 /* Build configuration list for PBXNativeTarget "KmpIntegrationCpp" */ = {
+		303C6A742CCD818A00003CE8 /* Build configuration list for PBXNativeTarget "IntegrationGcTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				303C6A752CCD818A00003CE8 /* Debug */,

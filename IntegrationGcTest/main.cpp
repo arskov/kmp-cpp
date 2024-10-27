@@ -23,18 +23,20 @@ int main(int argc, const char *argv[]) {
         //        std::cout << "interfaceMethod result: " <<
         //        interfaceMethodResult << std::endl;
         lib->DisposeString(interfaceMethodResult);
-        
+
         // Call returnInt and convert the result
         libKmpSample_kref_kotlin_Int intResult =
             lib->kotlin.root.design.KmpClazz.returnInt(clazzInstance);
         int nativeInt = lib->getNonNullValueOfInt(intResult);
         //        std::cout << "returnInt result: " << nativeInt << std::endl;
+        lib->DisposeStablePointer(intResult.pinned);
 
         // Call returnLong and convert the result
         libKmpSample_kref_kotlin_Long longResult =
             lib->kotlin.root.design.KmpClazz.returnLong(clazzInstance);
         long long nativeLong = lib->getNonNullValueOfLong(longResult);
         //        std::cout << "returnLong result: " << nativeLong << std::endl;
+        lib->DisposeStablePointer(longResult.pinned);
 
         // Explicitly delete the instance
         lib->DisposeStablePointer(clazzInstance.pinned);
@@ -42,16 +44,6 @@ int main(int argc, const char *argv[]) {
             std::cout << "Created " << i << " objects" << std::endl;
         }
     }
-
-    // Invoke functions
-    // Pass Int
-    lib->kotlin.root.design.acceptInteger(lib->createNullableInt(99));
-
-    // Pass and receive String
-    const char *result =
-        lib->kotlin.root.design.acceptString("String from C++");
-    std::cout << result << std::endl;
-    lib->DisposeString(result);
 
     return 0;
 }
